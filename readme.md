@@ -8,7 +8,7 @@ Creates mail service using Graph API and managed identity with api permissions
 - Primary Use case is to provide **centralized** simple MAIL API to clients that don't integrate directly with Graph API 
 
 **Example use case:**
-Provides REST API endpoint for function that should needs to send notifications.
+Provides REST API endpoint for function to send notifications.
 
 
 ___
@@ -16,10 +16,10 @@ ___
 ## Disclaimer
 Read [License](#license)
 
-Not designed bulk commercial email. Read: [Sending limits @ Exchange online](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+Not designed for bulk commercial email. Read: [Sending limits @ Exchange online](https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 ![img](https://securecloud188323504.files.wordpress.com/2021/09/image-52.png)
 
-- For commercial bulk email use see Sendgrid etc.
+- For commercial bulk email use, see Sendgrid etc.
 
 ___
 
