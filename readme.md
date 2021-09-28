@@ -182,6 +182,8 @@ az functionapp config appsettings set \
 --resource-group $rg \
 --settings WEBSITE_RUN_FROM_PACKAGE=1 
 
+# Sleep for the AAD propagation delay
+sleep 30
 ## Create permissions for Graph
 GraphAppId=00000003-0000-0000-c000-000000000000
 graphspn=$(az rest --method get --url "https://graph.microsoft.com/v1.0/servicePrincipals?\$search=\"appId:$GraphAppId\"""&\$select=displayName,id" --resource "https://graph.microsoft.com" --headers "ConsistencyLevel=eventual" -o tsv --query 'value' |cut -f3)
@@ -228,7 +230,7 @@ mailFunctionAppId=$(az rest --method get --url https://graph.microsoft.com/v1.0/
 ```bash
 
 recipient="shantic@thx.dewi.red"
-uri="$mailSvc?code=$keys&from=sendingaccount@thx138.onmicrosoft.com"
+uri="$mailSvc?code=$keys&from=joosua@thx138.onmicrosoft.com"
 msg="This function calling"
 
 curl --header "Content-Type: application/json" \

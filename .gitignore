@@ -99,3 +99,4 @@ mailservice.txt
 *.vscode
 *__azurite_*
 *blobstorage__
+test.sh
