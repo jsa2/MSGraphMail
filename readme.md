@@ -153,6 +153,7 @@ storageAcc=storage$(shuf -zer -n10  {a..z})
 # Create Resource Group (retention tag is just example, based on another service)
 az group create -n $rg \
 -l $location \
+--tags "svc=func"
 
 # Create storageAcc Account 
 saId=$(az storage account create -n $storageAcc  -g $rg --kind storageV2 -l $location -t Account --sku Standard_LRS  -o tsv --query "id")
