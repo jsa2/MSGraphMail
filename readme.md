@@ -211,6 +211,8 @@ echo "$mailSvc"
     fi
 done
 
+echo uri="$mailSvc?code=$keys&from=sendingaccount@thx138.onmicrosoft.com" > mailservice.txt
+
 #
 rm deploy.zip
 ```

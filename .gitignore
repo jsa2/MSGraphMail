@@ -95,3 +95,5 @@ local.settings.json
 
 #project specific
 deploy.zip
+mailservice.txt
+.vscode
