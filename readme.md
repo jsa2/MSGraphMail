@@ -8,7 +8,7 @@ Creates mail service using Graph API and managed identity with api permissions
 - Primary Use case is to provide **centralized** simple MAIL API to clients that don't integrate directly with Graph API 
 
 **Example use case:**
-Provides REST API endpoint for function to send notifications.
+Provide REST API endpoint for function to send notifications.
 
 
 ___
