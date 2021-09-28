@@ -3,8 +3,8 @@
 ## Solution description
 An implementation of Graph API  [**Send mail**](https://docs.microsoft.com/en-us/graph/api/user-sendmail?view=graph-rest-1.0&tabs=http)
 
-Creates mail service using Graph API and managed identity with api permissions
-- Using permission Mail.Send on the application
+Creates Azure Function based mail service using Graph API with managed identity
+- Uses permission Mail.Send for the Azure Function 
 - Primary Use case is to provide **centralized** simple MAIL API to clients that don't integrate directly with Graph API 
 
 **Example use case:**
