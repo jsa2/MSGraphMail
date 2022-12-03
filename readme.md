@@ -186,7 +186,7 @@ az functionapp config appsettings set \
 sleep 30
 ## Create permissions for Graph
 GraphAppId=00000003-0000-0000-c000-000000000000
-graphspn=$(az rest --method get --url "https://graph.microsoft.com/v1.0/servicePrincipals?\$search=\"appId:$GraphAppId\"""&\$select=displayName,id" --resource "https://graph.microsoft.com" --headers "ConsistencyLevel=eventual" -o tsv --query 'value' |cut -f3)
+graphspn=$(az rest --method get --url "https://graph.microsoft.com/v1.0/servicePrincipals?\$search=\"appId:$GraphAppId\"""&\$select=displayName,id" --resource "https://graph.microsoft.com" --headers "ConsistencyLevel=eventual" -o tsv --query 'value' |cut -f2)
 
 az rest --method post --url "https://graph.microsoft.com/v1.0/servicePrincipals/$id/appRoleAssignments" --resource "https://graph.microsoft.com" \
 --body "{\"principalId\": \"$id\",\"resourceId\": \"$graphspn\",\"appRoleId\": \"b633e1c5-b582-4048-a93e-9f11b44c7e96\"}" 
